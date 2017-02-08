@@ -34,7 +34,7 @@
 		text-transform: uppercase;
 	}
 	.head {
-	font-family: 'Barrio', cursive;
+		font-family: 'Barrio', cursive;
 		font-size: 14pt;
 		font-weight: 400;
 		text-align: center;
