@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	.blu {background-color: #286aa0; width: 50%; height: 30px;}
+	.red {background-color: #de2f37; width: 50%; height: 30px;margin-top: 5px;}
+	p {}
+	</style>
+</head>
+<body>
+	<div class="blu">
+		<p>asldkfhakjsdhauine aoisdhvp aowueifnvakljd aposdivjnap siudv aposidjv apsdfio ajsdf asdioufa sdfiu asdofiu asdfioua sdfu asdiofu asodiuf</p>
+	</div>
+	<div class="red">
+		<p>as df asdf asdf asdfadskjfas;d fasdkfj asdflkajds fa;lsdkjf ;askdjfsdkfja;lsdkjf asdf dsfasdf asdfasd fasdf asdfasd fasd fas df asdf</p>
+	</div>
+</body>
+</html>
