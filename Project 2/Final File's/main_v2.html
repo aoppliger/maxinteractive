@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="libraries/p5.js"></script>
+	<script src="Background.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			// Hide Trees upon page load
+			$(".Tree1").hide();
+			$(".Tree2").hide();
+			$(".Tree3").hide();
+			$(".Tree4").hide();
+			$(".Tree5").hide();
+			$(".Tree6").hide();
+			$(".Tree7").hide();
+			$(".Tree8").hide();
+			$(".Tree9").hide();
+			$(".Tree10").hide();
+			$(".Tree11").hide();
+
+			// Hide factory and show tree on click
+			$("#one").click(function(){
+				$(".smoke1").hide();
+				$(".Tree1").show();
+				$(".Tree2").show();
+				$(".Tree3").show();
+				$(".instr3").hide();
+			});
+			$("#two").click(function(){
+				$(".smoke2").hide();
+				$(".Tree4").show();
+				$(".Tree5").show();
+			});
+			$("#three").click(function(){
+				$(".smoke3").hide();
+				$(".Tree6").show();
+				$(".Tree7").show();
+				$(".Tree8").show();
+			});
+			$("#four").click(function(){
+				$(".smoke4").hide();
+				$(".Tree9").show();
+				$(".Tree10").show();
+				$(".Tree11").show();
+			});
+		});
+	</script>
+
+	<title>PLANET EARTH</title>
+
+	<style>
+		html,body{
+ 			margin:0;
+  			padding:0;
+		}
+
+		body{
+			background-color: #80ddff; 
+		}
+
+		#canvas-container {
+			z-index: -1;
+			position: absolute;
+		}
+
+		/* Tree Styles */
+		.Tree1 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 20px;
+    		width: 20%;
+    		user-drag: none; 
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree2 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 110px;
+    		width: 20%;
+			user-drag: none; 
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;    	
+        }
+		.Tree3 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 230px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree4 {
+			position: absolute;
+			margin-top: 21.9%;
+   			margin-left: 350px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree5 {
+			position: absolute;
+			margin-top: 25%;
+   			margin-left: 440px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree6 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 560px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree7 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 650px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree8 {
+			position: absolute;
+			margin-top: 21.9%;
+   			margin-left: 780px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree9 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 890px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree10 {
+			position: absolute;
+			margin-top: 21.9%;
+   			margin-left: 980px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree11 {
+			position: absolute;
+			margin-top: 26.3%;
+   			margin-left: 1050px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree12 {
+			position: absolute;
+			margin-top: 25%;
+   			margin-left: 420px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree13 {
+			position: absolute;
+			margin-top: 25%;
+   			margin-left: 420px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.Tree14 {
+			position: absolute;
+			margin-top: 25%;
+   			margin-left: 420px;
+    		width: 20%;
+    		user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		/* Factory Building Styles */
+		.smokestack_container {
+			align-content: center;
+			width: 1201px;
+		}
+		.smoke1 {
+			position: absolute;
+			margin-top: 250px;
+			margin-left: 1.1%;
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.smoke2 {
+			position: absolute;
+			margin-top: 266px;
+			margin-left: 25.8%;
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.smoke3 {
+			position: absolute;
+			margin-top: 250px;
+			margin-left: 50.4%;
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.smoke4 {
+			position: absolute;
+			margin-top: 266px;
+			margin-left: 75%;
+			user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+
+		/* Text */
+		.instr1 {
+			position: absolute;
+			margin-top: 15px;
+			width: 100%;
+			text-align: center;
+			font-family: "Helvetica", Sans-serif;
+			font-size: 18pt;
+			color: #fff;
+			z-index: 100;
+			-moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.instr2 {
+			position: absolute;
+			margin-top: 40px;
+			width: 100%;
+			text-align: center;
+			font-family: "Helvetica", Sans-serif;
+			font-size: 12pt;
+			color: #fff;
+			z-index: 99;
+			-moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+		.instr3 {
+			position: absolute;
+			margin-top: 640px;
+			width: 100%;
+			text-align: center;
+			font-family: "Helvetica", Sans-serif;
+			font-size: 14pt;
+			color: #fff;
+			z-index: 99;
+			-moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+		}
+	</style>
+</head>
+<body>
+<div id="canvas-container"></div>
+
+<!-- Factory Buildings -->
+<div class="smokestack_container">
+	<div><img id="one" src="Factory/One.png" class="smoke1"></div>
+	<div><img id="two" src="Factory/Three.png" class="smoke2"></div>
+	<div><img id="three" src="Factory/Two.png" class="smoke3"></div>
+	<div><img id="four" src="Factory/Three.png" class="smoke4"></div>
+</div>
+
+<!-- Trees -->
+<div><img id="slide2" src="Tree_2.png" class="Tree2"></div>
+<div><img id="slide4" src="Tree_3.png" class="Tree4"></div>
+<div><img id="slide1" src="Tree_1.png" class="Tree1"></div>
+<div><img id="slide3" src="Tree_1.png" class="Tree3"></div>
+<div><img id="slide5" src="Tree_5.png" class="Tree5"></div>
+<div><img id="slide8" src="Tree_3.png" class="Tree8"></div>
+<div><img id="slide6" src="Tree_1.png" class="Tree6"></div>
+<div><img id="slide11" src="Tree_2.png" class="Tree11"></div>
+<div><img id="slide7" src="Tree_2.png" class="Tree7"></div>
+<div><img id="slide9" src="Tree_1.png" class="Tree9"></div>
+<div><img id="slide10" src="Tree_3.png" class="Tree10"></div>
+
+<!-- Text -->
+<div class="instr1">Together We Can Create A Cleaner Future</div>
+<div class="instr2">Use the mouse to clean the smoke</div>
+<div class="instr3">Click a building</div>
+
+</body>
+</html>

@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="libraries/p5.js"></script>
+	<script src="Background.js"></script>
+
+	<script>
 		$(document).ready(function(){
-			$("#click").click(function(){
-				$("#slide").hide();
+			$("slide1").click(function(){
+				$(".Tree1").hide();
+			});
+			$("#slid2").click(function(){
+				$(".Tree2").hide();
+			});
+			$("#slide3").click(function(){
+				$(".Tree3").hide();
+			});
+			$("#slide4").click(function(){
+				$(".Tree4").hide();
+			});
+			$("#slide5").click(function(){
+				$(".Tree5").hide();
+			});
+			$("#slide6").click(function(){
+				$(".Tree6").hide();
+			});
+			$("#slide7").click(function(){
+				$(".Tree7").hide();
+			});
+			$("#slide8").click(function(){
+				$(".Tree8").hide();
+			});
+			$("#slide9").click(function(){
+				$(".Tree9").hide();
+			});
+			$("#slide10").click(function(){
+				$(".Tree10").hide();
+			});
+			$("#slide11").click(function(){
+				$(".Tree11").hide();
 			});
 		});
 	</script>
-
 
 	<title>PLANET EARTH</title>
 
@@ -21,13 +53,11 @@
 		body{
 			background-color: #b3e7ff; 
 		}
-		#click #slide {
-			margin: 10px 10px 10px 10px;
-			width: auto;
-			height: 15px;
-			font-size: 12px;
+		#canvas-container{
+			z-index: -1;
+			position: absolute;
 		}
-		.Tree {
+		.Tree1 {
 			position: absolute;
 			margin-top: 26.3%;
    			margin-left: 20px;
@@ -114,17 +144,17 @@
 	</style>
 </head>
 <body>
-<div id="click">CLICK ME</div>
-<div><img src="Tree_2.png" class="Tree2" id="slide"></div>
-<div><img src="Tree_3.png" class="Tree4" id="slide"></div>
-<div><img src="Tree_1.png" class="Tree" id="slide"></div>
-<div><img src="Tree_1.png" class="Tree3" id="slide"></div>
-<div><img src="Tree_5.png" class="Tree5"></div>
-<div><img src="Tree_3.png" class="Tree8"></div>
-<div><img src="Tree_1.png" class="Tree6"></div>
-<div><img src="Tree_2.png" class="Tree11"></div>
-<div><img src="Tree_2.png" class="Tree7"></div>
-<div><img src="Tree_1.png" class="Tree9"></div>
-<div><img src="Tree_3.png" class="Tree10"></div>
+<div id="canvas-container"></div>
+<div><img id="slide2" src="Tree_2.png" class="Tree2"></div>
+<div><img id="slide4" src="Tree_3.png" class="Tree4"></div>
+<div><img id="slide1" src="Tree_1.png" class="Tree1"></div>
+<div><img id="slide3" src="Tree_1.png" class="Tree3"></div>
+<div><img id="slide5" src="Tree_5.png" class="Tree5"></div>
+<div><img id="slide8" src="Tree_3.png" class="Tree8"></div>
+<div><img id="slide6" src="Tree_1.png" class="Tree6"></div>
+<div><img id="slide11" src="Tree_2.png" class="Tree11"></div>
+<div><img id="slide7" src="Tree_2.png" class="Tree7"></div>
+<div><img id="slide9" src="Tree_1.png" class="Tree9"></div>
+<div><img id="slide10" src="Tree_3.png" class="Tree10"></div>
 </body>
 </html>
